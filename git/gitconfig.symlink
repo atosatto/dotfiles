@@ -1,0 +1,12 @@
+[user]
+  name = Andrea Tosatto
+  email = andrea.tosy@gmail.com
+
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+[push]
+	default = matching
+[core]
+	excludesfile = /etc/git/global_gitignore
+
