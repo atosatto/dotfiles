@@ -35,12 +35,11 @@ FORMULAS=(
     python3
     ruby
     go
+    caskroom/cask/brew-cask
 )
 
 CASKS=(
-    caffeine
     spectacle
-    dash
     dropbox
     google-chrome
     google-hangouts
