@@ -68,7 +68,6 @@ CASKS=(
     textwrangler
     emacs
     mactex
-    tunnelblick
 )
 
 for tap in ${TAPS[@]}

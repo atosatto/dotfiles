@@ -32,4 +32,4 @@ export PATH="/usr/local/opt/git/bin:$PATH"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Haskell
-export PATH="$HOME/.cabal/bin:/Applications/ghc-7.8.2.app/Contents/bin:$PATH"   # Haskell for Mac
+export PATH="$HOME/.cabal/bin:/Applications/ghc-7.8.2.app/Contents/bin:$PATH"  
