@@ -63,6 +63,7 @@ CASKS=(
     xquartz
     java
     android-studio
+    intellij-idea
     phpstorm
     pycharm
     textwrangler
