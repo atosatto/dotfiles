@@ -66,6 +66,7 @@ CASKS=(
     intellij-idea
     phpstorm
     pycharm
+    atom
     textwrangler
     emacs
     mactex

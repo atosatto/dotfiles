@@ -1,6 +1,9 @@
 # Go
+GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
+#export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
+#export GOROOY=/usr/local/opt/go/libexec
 export GOPATH=~/Documents/Sviluppo/workspace/go
-export PATH=$PATH:~/Documents/Sviluppo/workspace/go/bin
+export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
 # Java
 #export JAVA_HOME=$(/usr/libexec/java_home)
@@ -32,4 +35,4 @@ export PATH="/usr/local/opt/git/bin:$PATH"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Haskell
-export PATH="$HOME/.cabal/bin:/Applications/ghc-7.8.2.app/Contents/bin:$PATH"  
+export PATH="$HOME/.cabal/bin:/Applications/ghc-7.8.2.app/Contents/bin:$PATH"
