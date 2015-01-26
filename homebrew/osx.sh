@@ -33,6 +33,7 @@ FORMULAS=(
     nmap
     python
     python3
+    node
     ruby
     go
     caskroom/cask/brew-cask
@@ -54,7 +55,6 @@ CASKS=(
     osxfuse
     skype
     spotify
-    sublime-text
     the-unarchiver
     vagrant
     virtualbox
@@ -82,6 +82,8 @@ brew install ${FORMULAS[@]}
 brew update
 
 brew cask install --appdir=/Applications ${CASKS[@]}
+
+brew install graphviz --with-gts
 
 #brew cask alfred link
 
