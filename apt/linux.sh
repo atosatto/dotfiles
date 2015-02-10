@@ -41,7 +41,7 @@ DEBS=(
 		https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_1.6.2_amd64.deb	 # dropbox
 		http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-1_i386.deb	# skype
     https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb  # vagrant
-		http://downloads.typesafe.com/scala/2.11.5/scala-2.11.5.deb?_ga=1.15839732.331535665.1423576780 # scala
+		http://downloads.typesafe.com/scala/2.11.5/scala-2.11.5.deb  # scala
 )
 
 # Script requirements
