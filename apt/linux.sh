@@ -29,6 +29,7 @@ PACKAGES=(
     ruby
 		oracle-java8-installer
 		ansible
+		lxc-docker
 		virtualbox
 		network-manager-openvpn network-manager-openvpn-gnome
 		nfs-kernel-server
@@ -54,7 +55,10 @@ do
 done
 
 # Custom procedures to add repos
+## NodeJS
 curl -sL https://deb.nodesource.com/setup | sudo bash -
+## Docker
+curl -sSL https://get.docker.com/ubuntu/ | sudo sh
 
 # Updating everything
 sudo apt-get update
