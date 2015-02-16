@@ -11,12 +11,15 @@ cd "$(dirname "$0")"
 
 # Extra Repos
 REPOS=(
-	ppa:webupd8team/java
+	"ppa:webupd8team/java"
+	"deb http://repository.spotify.com stable non-free"
+	"deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) non-free contrib"
 )
 
 # In-repo packages
 PACKAGES=(
 		youtube-dl
+		spotify-client
 		vim
 		wget
 		nmap
@@ -30,7 +33,7 @@ PACKAGES=(
 		oracle-java8-installer
 		ansible
 		lxc-docker
-		virtualbox
+		virtualbox-4.3
 		network-manager-openvpn network-manager-openvpn-gnome
 		nfs-kernel-server
 )
@@ -59,6 +62,10 @@ done
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 ## Docker
 curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+## Spotify (adding the missing key)
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
+## Virtualbox
+wget -q -O - http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc | sudo apt-key add -
 
 # Updating everything
 sudo apt-get update
