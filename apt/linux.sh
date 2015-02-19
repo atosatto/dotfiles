@@ -12,6 +12,8 @@ cd "$(dirname "$0")"
 # Extra Repos
 REPOS=(
 	"ppa:webupd8team/java"
+	"ppa:ansible/ansible"
+	"ppa:cwchien/gradle"
 	"deb http://repository.spotify.com stable non-free"
 	"deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) non-free contrib"
 )
@@ -26,11 +28,12 @@ PACKAGES=(
 		git
 		git-flow
 		subversion
-		python
+		python python-pip python-dev
 		python3
 		nodejs
     ruby
-		oracle-java8-installer
+		oracle-java8-installer oracle-java8-set-default
+		gradle
 		ansible
 		lxc-docker
 		virtualbox-4.3
@@ -49,7 +52,7 @@ DEBS=(
 )
 
 # Script requirements
-sudo apt-get install -y curl python-software-properties
+sudo apt-get install -y curl software-properties-common
 
 # Standard procedure to add new repos
 for repo in ${REPOS[@]}
