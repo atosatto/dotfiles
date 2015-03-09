@@ -4,9 +4,10 @@ set -e
 
 NPM_GLOBALS=(
     cordova
-    ios-sim
     ionic
 )
+
+echo "  Installing multi-platform global npm dependencies."
 
 for glob in ${NPM_GLOBALS[@]}
 do

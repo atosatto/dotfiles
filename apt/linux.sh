@@ -20,35 +20,37 @@ REPOS=(
 
 # In-repo packages
 PACKAGES=(
-		youtube-dl
-		spotify-client
-		vim
-		wget
-		nmap
-		git
-		git-flow
-		subversion
-		python python-pip python-dev
-		python3
-		nodejs
-    ruby
-		oracle-java8-installer oracle-java8-set-default
-		gradle
-		ansible
-		lxc-docker
-		virtualbox-4.3
-		network-manager-openvpn network-manager-openvpn-gnome
-		nfs-kernel-server
+	youtube-dl
+	spotify-client
+	vim
+	zsh
+	wget
+	nmap
+	git
+	git-flow
+	subversion
+	python python-pip python-dev
+	python3
+	nodejs
+	ruby
+	oracle-java8-installer oracle-java8-set-default
+	gradle
+	ansible
+	lxc-docker
+	virtualbox-4.3
+	network-manager-openvpn network-manager-openvpn-gnome
+	nfs-kernel-server
 )
 
 # On-web packages
 DEBS=(
-		https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 	# google-chrome
-		https://atom.io/download/deb	# atom
-		https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_1.6.2_amd64.deb	 # dropbox
-		http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-1_i386.deb	# skype
-    https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb  # vagrant
-		http://downloads.typesafe.com/scala/2.11.5/scala-2.11.5.deb  # scala
+	https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 	# google-chrome
+	https://atom.io/download/deb							# atom
+	https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_1.6.2_amd64.deb	# dropbox
+	http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-1_i386.deb	# skype
+	https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb  		# vagrant
+	# https://dl.bintray.com/mitchellh/packer/packer_0.7.5_linux_amd64.zip		# packer
+	http://downloads.typesafe.com/scala/2.11.5/scala-2.11.5.deb  			# scala
 )
 
 # Script requirements
