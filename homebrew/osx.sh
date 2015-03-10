@@ -42,6 +42,7 @@ FORMULAS=(
 CASKS=(
     spectacle
     dropbox
+    firefox
     google-chrome
     google-hangouts
     toggldesktop
@@ -55,10 +56,11 @@ CASKS=(
     osxfuse
     skype
     spotify
+    vlc
     the-unarchiver
     vagrant
     virtualbox
-    vlc
+    boot2docker
     wireshark
     xquartz
     java
@@ -70,6 +72,7 @@ CASKS=(
     textwrangler
     emacs
     mactex
+    ansible
 )
 
 for tap in ${TAPS[@]}
