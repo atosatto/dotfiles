@@ -12,6 +12,7 @@ cd "$(dirname "$0")"
 # Extra Repos
 REPOS=(
 	"ppa:webupd8team/java"
+	"ppa:webupd8team/atom"
 	"ppa:ansible/ansible"
 	"ppa:cwchien/gradle"
 	"deb http://repository.spotify.com stable non-free"
@@ -40,12 +41,12 @@ PACKAGES=(
 	virtualbox-4.3
 	network-manager-openvpn network-manager-openvpn-gnome
 	nfs-kernel-server
+	atom
 )
 
 # On-web packages
 DEBS=(
 	https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 	# google-chrome
-	https://atom.io/download/deb							# atom
 	https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_1.6.2_amd64.deb	# dropbox
 	http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-1_i386.deb	# skype
 	https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb  		# vagrant
