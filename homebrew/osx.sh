@@ -51,6 +51,7 @@ CASKS=(
     cyberduck
     simple-comic
     arduino
+    lastpass
     gpgtools
     iterm2
     osxfuse
@@ -62,6 +63,7 @@ CASKS=(
     virtualbox
     boot2docker
     wireshark
+    kitematic
     xquartz
     java
     android-studio
@@ -73,6 +75,7 @@ CASKS=(
     emacs
     mactex
     ansible
+    sparkleshare
 )
 
 for tap in ${TAPS[@]}
