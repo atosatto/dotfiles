@@ -42,7 +42,7 @@ ZSH_THEME="blinks"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vagrant python go)
+plugins=(git vagrant python go docker docker-compose boot2docker)
 
 source $ZSH/oh-my-zsh.sh
 

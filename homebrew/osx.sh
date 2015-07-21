@@ -36,6 +36,7 @@ FORMULAS=(
     node
     ruby
     go
+    awscli
     caskroom/cask/brew-cask
 )
 
