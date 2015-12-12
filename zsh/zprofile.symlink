@@ -1,7 +1,7 @@
 # Go
 GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
 #export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
-#export GOROOY=/usr/local/opt/go/libexec
+export GO15VENDOREXPERIMENT=1
 export GOPATH=~/Documents/Sviluppo/workspace/go
 export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
