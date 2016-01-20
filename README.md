@@ -1,12 +1,7 @@
 # Dotfiles
 
-Dotfiles are all those `.` files that sit in your `~` and customize your system. Here are mine.
-
-What I like about my dotfiles:
-
-- Nicely Organised
-- Multi-Platform MakeFile-based installer
-- Standard configuration for every machine I use
+Dotfiles are all those `.` files that sit in your `~` and customize your system.
+Here are mine.
 
 # Installation
 
@@ -17,14 +12,14 @@ What I like about my dotfiles:
     make dotfiles
 
     # install os-specific things
-    make mac | linux | windows
+    make mac | linux
 
 ## Thanks
 
 - [@dave-tucker](https://github.com/dave-tucker/) - for sharing his dotfiles
-- [@MarcoSero](https://github.com/MarcoSero) - for transmitting to me his passion for machine setup automation while we were mates at university
+- [@MarcoSero](https://github.com/MarcoSero) - for the many hours we spent talking about automation while we were mates at university
 
 ## License
 
-Copyright 2014 Andrea Tosatto
+Copyright 2016 Andrea Tosatto
 Licensed under the MIT License

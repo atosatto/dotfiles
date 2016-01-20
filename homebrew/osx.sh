@@ -37,17 +37,13 @@ FORMULAS=(
     ruby
     go
     awscli
-    caskroom/cask/brew-cask
 )
 
 CASKS=(
     spectacle
     dropbox
-    firefox
     google-chrome
     google-hangouts
-    toggldesktop
-    mou
     appcleaner
     cyberduck
     simple-comic
@@ -67,16 +63,11 @@ CASKS=(
     kitematic
     xquartz
     java
-    android-studio
-    intellij-idea
-    phpstorm
-    pycharm
     atom
     textwrangler
     emacs
     mactex
     ansible
-    sparkleshare
 )
 
 for tap in ${TAPS[@]}

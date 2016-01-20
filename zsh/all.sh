@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ../script/functions.sh
+
 set -e
 cd "$(dirname "$0")"
 
@@ -10,3 +12,7 @@ fi
 
 echo "   Changing Default Shell to ZSH"
 chsh -s /bin/zsh
+
+echo "   Simlinking the zshrc and zprofile file"
+install_dotfiles "`pwd $(dirname $0)`/zshrc.symlink"
+install_dotfiles "`pwd $(dirname $0)`/zprofile.symlink"
