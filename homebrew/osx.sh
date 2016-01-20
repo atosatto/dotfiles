@@ -37,6 +37,7 @@ FORMULAS=(
     ruby
     go
     awscli
+    shellcheck
 )
 
 CASKS=(
