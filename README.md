@@ -5,7 +5,7 @@ Here are mine.
 
 ## Installation
 
-Clone the repo and follow the Usage instructions
+Clone the repo and follow the [usage](#usage) instructions
 
 ```bash
 git clone git@github.com:atosatto/dotfiles.git
