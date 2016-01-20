@@ -7,19 +7,23 @@ Here are mine.
 
 Clone the repo and follow the Usage instructions
 
-  git clone git@github.com:atosatto/dotfiles.git
-  cd dotfiles
+```bash
+git clone git@github.com:atosatto/dotfiles.git
+cd dotfiles
+```
 
 ## Usage
 
-    # install cross-platform things and dotfiles
-    make
+```bash
+# install cross-platform things and dotfiles
+make
 
-    # just the dotfiles
-    make dotfiles
+# just the dotfiles
+make dotfiles
 
-    # install os-specific things
-    make mac | linux
+# install os-specific things
+make mac | linux
+```
 
 ## Thanks
 
