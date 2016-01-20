@@ -58,7 +58,7 @@ DEBS=(
 sudo apt-get install -y curl software-properties-common
 
 # Standard procedure to add new repos
-for repo in ${REPOS[@]}
+for repo in "${REPOS[@]}"
 do
 		sudo add-apt-repository $repo
 done
@@ -77,10 +77,10 @@ wget -q -O - http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc | 
 sudo apt-get update
 
 # Installing packages via apt
-sudo apt-get install -y ${PACKAGES[@]}
+sudo apt-get install -y "${PACKAGES[@]}"
 
 # Installing packages via dpks
-for deb in ${DEBS[@]}
+for deb in "${DEBS[@]}"
 do
 		FILE=`mktemp`
     wget "$deb" -qO $FILE

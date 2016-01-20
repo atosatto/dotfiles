@@ -1,14 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Homebrew
 #
 # This installs some of the common dependencies needed (or at least desired)
-# using Homebrew.
+# using Homeb\rew.
 
 set -e
 
 # Check for Homebrew
-if test ! $(which brew)
+if test ! "$(which brew)"
 then
   echo "  Installing Homebrew"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -38,6 +38,7 @@ FORMULAS=(
     go
     awscli
     shellcheck
+    ansible
 )
 
 CASKS=(
@@ -47,7 +48,6 @@ CASKS=(
     google-hangouts
     appcleaner
     cyberduck
-    simple-comic
     arduino
     lastpass
     gpgtools
@@ -65,22 +65,21 @@ CASKS=(
     xquartz
     java
     atom
-    textwrangler
     emacs
     mactex
-    ansible
+    tunnelblick
 )
 
-for tap in ${TAPS[@]}
+for tap in "${TAPS[@]}"
 do
     brew tap $tap
 done
 
-brew install ${FORMULAS[@]}
+brew install "${FORMULAS[@]}"
 
 brew update
 
-brew cask install --appdir=/Applications ${CASKS[@]}
+brew cask install --appdir=/Applications "${CASKS[@]}"
 
 brew install graphviz --with-gts
 

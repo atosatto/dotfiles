@@ -17,7 +17,7 @@ export PATH="$JAVA_HOME/bin:$PATH"
 # $(boot2docker shellinit | grep export)
 
 # TeXLive
-export PATH="/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
+export PATH="/usr/local/texlive/2015/bin/x86_64-darwin:$PATH"
 
 # Ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"

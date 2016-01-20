@@ -1,15 +1,18 @@
 DOTFILES := $(shell pwd)
 
-all: crossplatform
+test:
+	bash $(DOTFILES)/git/test.sh
+
+default: crossplatform
 
 crossplatform:
-		sh $(DOTFILES)/script/generic.sh
+	bash $(DOTFILES)/scripts/generic.sh
 
 platform:
-		sh $(DOTFILES)/script/platform.sh
+	bash $(DOTFILES)/scripts/platform.sh
 
 mac:	crossplatform platform
 
 linux:	crossplatform platform
 
-.PHONY: all crossplatform mac linux
+.PHONY: default crossplatform mac linux

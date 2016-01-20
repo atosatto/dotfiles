@@ -1,17 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 
-source ../script/functions.sh
+source "scripts/functions.sh"
 
-cd "$(dirname "$0")"
+basepath="$(dirname $0)"
+cd "$basepath" || exit
 
 echo "  Installing GIT Configuration"
 
 if [ ! -d '/etc/git/' ]; then
-	sudo mkdir '/etc/git/'
+    echo "  Creating the /etc/git/ directory"
+    sudo mkdir '/etc/git/'
 fi
 
-install_dotfiles "`pwd $(dirname $0)`gitconfig.symlink"
-
-if [ ! -e "`pwd $(dirname $0)`/global_gitignore" ]; then
-	sudo ln -s "`pwd $(dirname $0)`/global_gitignore" /etc/git/global_gitignore
+if [ ! -e /etc/git/global_gitignore ]; then
+    echo "  Installing the global_gitignore file into /etc/git"
+    sudo ln -s "$(pwd $basepath)/global_gitignore" /etc/git/global_gitignore
 fi
+
+##  install_dotfiles "$(pwd $basepath)/gitconfig.symlink"

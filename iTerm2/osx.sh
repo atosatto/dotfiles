@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-cd "$(dirname "$0")"
+cd "$(dirname "$0")" || exit
 
 echo "  Installing iTerm2 Colors."
 
