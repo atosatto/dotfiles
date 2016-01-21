@@ -67,7 +67,6 @@ CASKS=(
     atom
     emacs
     mactex
-    tunnelblick
 )
 
 for tap in "${TAPS[@]}"
