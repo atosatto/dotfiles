@@ -40,7 +40,6 @@ FORMULAS=(
     shellcheck
     ansible
     docker
-    boot2docker
     docker-machine
     docker-compose
 )
