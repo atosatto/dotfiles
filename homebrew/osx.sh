@@ -39,6 +39,10 @@ FORMULAS=(
     awscli
     shellcheck
     ansible
+    docker
+    boot2docker
+    docker-machine
+    docker-compose
 )
 
 CASKS=(
@@ -59,9 +63,7 @@ CASKS=(
     the-unarchiver
     vagrant
     virtualbox
-    boot2docker
     wireshark
-    kitematic
     xquartz
     java
     atom
