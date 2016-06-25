@@ -5,6 +5,7 @@
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+	checkout-pr = "!f() { git fetch $1 pull/$2/head:pr-$2 && git checkout pr-$2; }; f"
 [push]
 	default = matching
 [core]
