@@ -1,6 +1,12 @@
 # Locale
 unset LC_CTYPE
 
+# Sourcing .authokens file
+if [ -f $HOME/.authtokens ]; then
+     source $HOME/.authtokens
+fi
+
+
 # Go
 GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
 #export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
