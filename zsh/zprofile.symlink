@@ -1,11 +1,12 @@
 # Locale
 unset LC_CTYPE
+export LANG="en_EN.UTF-8"  
+export LC_ALL="it_IT.UTF-8"  
 
 # Sourcing .authokens file
 if [ -f $HOME/.authtokens ]; then
      source $HOME/.authtokens
 fi
-
 
 # Go
 GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)

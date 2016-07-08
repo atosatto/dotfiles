@@ -31,6 +31,7 @@ FORMULAS=(
     git-flow
     wget
     nmap
+    watch
     python
     python3
     node
@@ -51,12 +52,13 @@ CASKS=(
     google-hangouts
     appcleaner
     cyberduck
-    arduino
     lastpass
     gpgtools
     iterm2
     osxfuse
     skype
+    slack
+    limechat
     spotify
     vlc
     the-unarchiver
@@ -66,7 +68,6 @@ CASKS=(
     xquartz
     java
     atom
-    emacs
     mactex
 )
 
@@ -81,9 +82,8 @@ brew update
 
 brew cask install --appdir=/Applications "${CASKS[@]}"
 
-brew install graphviz --with-gts
-
-#brew cask alfred link
+# brew install graphviz --with-gts
+# brew cask alfred link
 
 brew cleanup
 
