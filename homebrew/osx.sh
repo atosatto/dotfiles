@@ -40,9 +40,6 @@ FORMULAS=(
     awscli
     shellcheck
     ansible
-    docker
-    docker-machine
-    docker-compose
 )
 
 CASKS=(
@@ -68,6 +65,7 @@ CASKS=(
     xquartz
     java
     atom
+    docker
     mactex
 )
 

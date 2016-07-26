@@ -52,3 +52,6 @@ export PATH="$HOME/.cabal/bin:/Applications/ghc-7.8.2.app/Contents/bin:$PATH"
 
 # VMWare ovftool
 export PATH="/Applications/VMware OVF Tool:$PATH"
+
+# Aliases
+alias drmi='docker images -q -f "dangling=true" | xargs docker rmi'
