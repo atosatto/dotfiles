@@ -39,7 +39,6 @@ FORMULAS=(
     go
     awscli
     shellcheck
-    ansible
 )
 
 CASKS=(
@@ -52,7 +51,6 @@ CASKS=(
     lastpass
     gpgtools
     iterm2
-    osxfuse
     skype
     slack
     limechat
