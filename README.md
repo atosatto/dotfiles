@@ -3,26 +3,14 @@
 Dotfiles are all those `.` files that sit in your `~` and customize your system.
 Here are mine.
 
-## Installation
-
-Clone the repo and follow the [usage](#usage) instructions
-
-```bash
-git clone git@github.com:atosatto/dotfiles.git
-cd dotfiles
-```
-
 ## Usage
 
 ```bash
-# install cross-platform things and dotfiles
+git clone https://github.com/atosatto/dotfiles.git
+cd dotfiles
+
+# install everything
 make
-
-# just the dotfiles
-make dotfiles
-
-# install os-specific things
-make mac | linux
 ```
 
 ## Thanks
