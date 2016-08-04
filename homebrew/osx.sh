@@ -56,6 +56,7 @@ CASKS=(
     limechat
     spotify
     vlc
+    webtorrent
     the-unarchiver
     vagrant
     virtualbox

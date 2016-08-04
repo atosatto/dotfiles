@@ -17,4 +17,4 @@ if [ ! -e /etc/git/global_gitignore ]; then
     sudo ln -s "$(pwd $basepath)/global_gitignore" /etc/git/global_gitignore
 fi
 
-##  install_dotfiles "$(pwd $basepath)/gitconfig.symlink"
+install_dotfiles "$(pwd $basepath)/gitconfig.symlink"
