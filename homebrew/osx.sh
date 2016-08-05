@@ -22,6 +22,7 @@ TAPS=(
     homebrew/binary
     homebrew/science
     caskroom/cask
+    neovim/neovim
 )
 
 FORMULAS=(
@@ -39,6 +40,7 @@ FORMULAS=(
     go
     awscli
     shellcheck
+    neovim
 )
 
 CASKS=(
