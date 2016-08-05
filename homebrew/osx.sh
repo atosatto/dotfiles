@@ -41,6 +41,8 @@ FORMULAS=(
     awscli
     shellcheck
     neovim
+    packer
+    terraform
 )
 
 CASKS=(
