@@ -43,6 +43,7 @@ FORMULAS=(
     neovim
     packer
     terraform
+    keybase
 )
 
 CASKS=(
