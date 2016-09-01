@@ -1,7 +1,7 @@
 # Locale
+export LANG="en_US.UTF-8"  
+export LC_ALL="en_US.UTF-8"  
 unset LC_CTYPE
-export LANG="en_EN.UTF-8"  
-export LC_ALL="it_IT.UTF-8"  
 
 # Sourcing .authokens file
 if [ -f $HOME/.authtokens ]; then

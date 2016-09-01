@@ -71,6 +71,8 @@ CASKS=(
     atom
     docker
     mactex
+    xampp
+    joinme
 )
 
 for tap in "${TAPS[@]}"
