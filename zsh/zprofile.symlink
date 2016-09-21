@@ -1,7 +1,22 @@
 # Locale
-export LANG="en_US.UTF-8"  
-export LC_ALL="en_US.UTF-8"  
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 unset LC_CTYPE
+
+bash_source() {
+  alias shopt=':'
+  alias _expand=_bash_expand
+  alias _complete=_bash_comp
+  emulate -L sh
+  setopt kshglob noshglob braceexpand
+
+  source "$@"
+}
+
+# Sourcing the .bash_completion.d files
+if [ -d ~/.bash_completion.d ]; then
+  bash_source ~/.bash_completion.d/*
+fi
 
 # Sourcing .authokens file
 if [ -f $HOME/.authtokens ]; then

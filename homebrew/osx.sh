@@ -67,6 +67,7 @@ CASKS=(
     virtualbox
     wireshark
     xquartz
+    chicken
     java
     atom
     docker
