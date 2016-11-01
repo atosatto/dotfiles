@@ -27,7 +27,7 @@ fi
 GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
 #export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
 export GO15VENDOREXPERIMENT=1
-export GOPATH=~/Documents/Sviluppo/workspace
+export GOPATH=~/.go
 export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
 # Java
