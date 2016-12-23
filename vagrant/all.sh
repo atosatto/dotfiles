@@ -8,7 +8,6 @@ cd "$basepath" || exit
 PLUGINS=(
   vagrant-hostmanager
   vagrant-vbguest
-  vagrant-openstack-provider
   vagrant-digitalocean
 )
 

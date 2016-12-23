@@ -2,8 +2,7 @@
 #
 # Homebrew
 #
-# This installs some of the common dependencies needed (or at least desired)
-# using Homeb\rew.
+# Installs packages and applications using Homebrew
 
 set -e
 
@@ -44,21 +43,18 @@ FORMULAS=(
     packer
     terraform
     keybase
+    mosh
 )
 
 CASKS=(
     spectacle
     dropbox
-    google-chrome
-    google-hangouts
+    firefox
     appcleaner
     cyberduck
-    lastpass
     gpgtools
     iterm2
     skype
-    slack
-    limechat
     spotify
     vlc
     webtorrent
@@ -73,6 +69,7 @@ CASKS=(
     docker
     mactex
     xampp
+    keeweb
     joinme
 )
 
@@ -88,7 +85,6 @@ brew update
 brew cask install --appdir=/Applications "${CASKS[@]}"
 
 # brew install graphviz --with-gts
-# brew cask alfred link
 
 brew cleanup
 
