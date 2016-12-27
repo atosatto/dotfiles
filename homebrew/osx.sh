@@ -21,6 +21,7 @@ TAPS=(
     homebrew/binary
     homebrew/science
     caskroom/cask
+    caskroom/versions
     neovim/neovim
 )
 
@@ -70,6 +71,7 @@ CASKS=(
     mactex
     xampp
     keeweb
+    dash2
     joinme
 )
 
