@@ -51,6 +51,7 @@ CASKS=(
     spectacle
     dropbox
     firefox
+    caffeine
     appcleaner
     cyberduck
     gpgtools
