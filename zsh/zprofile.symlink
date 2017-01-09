@@ -3,21 +3,6 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 unset LC_CTYPE
 
-bash_source() {
-  alias shopt=':'
-  alias _expand=_bash_expand
-  alias _complete=_bash_comp
-  emulate -L sh
-  setopt kshglob noshglob braceexpand
-
-  source "$@"
-}
-
-# Sourcing the .bash_completion.d files
-if [ -d ~/.bash_completion.d ]; then
-  bash_source ~/.bash_completion.d/*
-fi
-
 # Sourcing .authokens file
 if [ -f $HOME/.authtokens ]; then
      source $HOME/.authtokens
@@ -34,12 +19,6 @@ export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
 #export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
 export PATH="$JAVA_HOME/bin:$PATH"
-
-# Android
-
-# Boot2docker
-# export DOCKER_TLS_VERIFY=1
-# $(boot2docker shellinit | grep export)
 
 # TeXLive
 export PATH="/usr/local/texlive/2015/bin/x86_64-darwin:$PATH"
@@ -70,3 +49,4 @@ export PATH="/Applications/VMware OVF Tool:$PATH"
 
 # Aliases
 alias drmi='docker images -q -f "dangling=true" | xargs docker rmi'
+alias vim=nvim

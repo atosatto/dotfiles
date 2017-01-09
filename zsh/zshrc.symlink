@@ -63,3 +63,5 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

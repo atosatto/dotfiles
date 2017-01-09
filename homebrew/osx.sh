@@ -74,6 +74,7 @@ CASKS=(
     keeweb
     dash2
     joinme
+    etcher
 )
 
 for tap in "${TAPS[@]}"
