@@ -1,21 +1,15 @@
-" vim-plug
-" reload .vimrc and :PlugInstall to install plugins
-call plug#begin('~/.local/share/nvim/plugged')
+" Plugins Installation
+source $HOME/.config/nvim/plugins.vim
 
-" Vim Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plugin specific configurations
+source $HOME/.config/nvim/plugins-settings.vim
 
-" NERDTree
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Generic settings
+source $HOME/.config/nvim/settings.vim
 
-" FZF
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" All configured mappings
+" source $HOME/.config/nvim/mappings.vim
 
-" Vim Go
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+" User defined functions
+" source $HOME/.config/nvim/funcs.vim
 
-" Ansible
-Plug 'pearofducks/ansible-vim'
-
-call plug#end()
