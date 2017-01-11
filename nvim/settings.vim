@@ -17,6 +17,9 @@ set rnu
 set showmatch
 hi SpellBad guibg=#ff2929 ctermbg=124
 
+" Always open NERDTree
+au VimEnter *  NERDTree
+
 " Show tabs and spaces
 set list
 au FileType nerdtree set nolist

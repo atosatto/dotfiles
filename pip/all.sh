@@ -9,6 +9,7 @@ PACKAGES=(
   python-openstackclient
   python-vagrant
   docker-py
+  dopy
   neovim
 )
 
