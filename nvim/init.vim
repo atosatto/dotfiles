@@ -8,7 +8,7 @@ source $HOME/.config/nvim/plugins-settings.vim
 source $HOME/.config/nvim/settings.vim
 
 " All configured mappings
-" source $HOME/.config/nvim/mappings.vim
+source $HOME/.config/nvim/mappings.vim
 
 " User defined functions
 " source $HOME/.config/nvim/funcs.vim

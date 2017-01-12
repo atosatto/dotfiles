@@ -7,6 +7,11 @@
 " NERDTree
 let NERDTreeShowHidden=1
 
+" NERDCommenter
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+
 " YCM
 autocmd! User YouCompleteMe call youcompleteme#Enable()
 let g:ycm_confirm_extra_conf=0
