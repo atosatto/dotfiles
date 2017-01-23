@@ -8,6 +8,10 @@ if [ -f $HOME/.authtokens ]; then
      source $HOME/.authtokens
 fi
 
+# GPG
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh
+
 # Go
 GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
 #export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
@@ -50,3 +54,4 @@ export PATH="/Applications/VMware OVF Tool:$PATH"
 # Aliases
 alias drmi='docker images -q -f "dangling=true" | xargs docker rmi'
 alias vim=nvim
+alias gophersay='cowsay -f gopher'

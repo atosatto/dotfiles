@@ -4,6 +4,9 @@
 set background=dark
 colorscheme wombat 
 
+" Clipboard
+set cb=unnamed
+
 " Initial indentation settings
 set tabstop=2
 set shiftwidth=2
