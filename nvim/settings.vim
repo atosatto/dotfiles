@@ -16,15 +16,17 @@ set smarttab
 set modeline
 set exrc
 set hidden
-set rnu
+" set rnu " display relative numbers
+set nu    " display numbers
 set showmatch
 hi SpellBad guibg=#ff2929 ctermbg=124
 
 " Always open NERDTree
-au VimEnter *  NERDTree
+" au VimEnter *  NERDTree
 
 " Show tabs and spaces
 set list
+set listchars=tab:>-,trail:~,extends:>,precedes:<
 au FileType nerdtree set nolist
 
 " XML

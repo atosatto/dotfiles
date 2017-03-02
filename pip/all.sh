@@ -10,6 +10,7 @@ PACKAGES=(
   python-vagrant
   docker-py
   dopy
+  boto
   neovim
 )
 

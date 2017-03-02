@@ -33,6 +33,8 @@ FORMULAS=(
     wget
     nmap
     watch
+    tree
+    tmux
     python
     python3
     node
@@ -45,6 +47,7 @@ FORMULAS=(
     terraform
     keybase
     mosh
+    jq
 )
 
 CASKS=(
