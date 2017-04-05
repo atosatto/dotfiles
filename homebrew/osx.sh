@@ -48,6 +48,7 @@ FORMULAS=(
     keybase
     mosh
     jq
+    bind
 )
 
 CASKS=(

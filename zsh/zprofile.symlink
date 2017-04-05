@@ -60,3 +60,8 @@ export PATH="/Applications/VMware OVF Tool:$PATH"
 alias drmi='docker images -q -f "dangling=true" | xargs docker rmi'
 alias vim=nvim
 alias gophersay='cowsay -f gopher'
+
+function weather {
+   command -v 'curl' > /dev/null 2>&1 && \
+   curl -4 "wttr.in/$1" -s #| head -n 7
+}
