@@ -49,6 +49,7 @@ FORMULAS=(
     mosh
     jq
     bind
+    icdiff
 )
 
 CASKS=(
