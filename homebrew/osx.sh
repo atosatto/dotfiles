@@ -50,6 +50,7 @@ FORMULAS=(
     jq
     bind
     icdiff
+    pwgen
 )
 
 CASKS=(
@@ -80,6 +81,7 @@ CASKS=(
     dash2
     joinme
     etcher
+    mkchromecast
 )
 
 for tap in "${TAPS[@]}"
