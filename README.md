@@ -6,8 +6,10 @@ Here are mine.
 ## Usage
 
 ```bash
-git clone https://github.com/atosatto/dotfiles.git
-cd dotfiles
+# clone the repository
+cd $HOME
+git clone https://github.com/atosatto/dotfiles.git .dotfiles
+cd .dotfiles
 
 # install everything
 make
@@ -20,5 +22,5 @@ make
 
 ## License
 
-Copyright 2016 Andrea Tosatto
+Copyright 2019 Andrea Tosatto
 Licensed under the MIT License

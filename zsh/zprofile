@@ -1,0 +1,67 @@
+##
+# Locale
+##
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+unset LC_CTYPE
+
+# # Sourcing .authokens file
+# if [ -f $HOME/.authtokens ]; then
+#      source $HOME/.authtokens
+# fi
+
+##
+# gpg-agent
+##
+
+export GPG_TTY=$(tty)
+if [ -f "${HOME}/.gpg-agent-info" ]; then
+   . "${HOME}/.gpg-agent-info"
+    export GPG_AGENT_INFO
+    export SSH_AUTH_SOCK
+    export SSH_AGENT_PID
+fi
+
+##
+# Python
+##
+
+# Load pyenv
+eval "$(pyenv init -)"
+
+# Load pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
+
+# Build Python with the --enable-framework flag when using pyenv
+export PYTHON_CONFIGURE_OPTS="--enable-framework"
+
+# Restrict the usage of the pip command to virtualenvs
+export PIP_REQUIRE_VIRTUALENV=true
+
+##
+# Go
+##
+
+# Directory where go get will place binaries source and dependencies
+# NB: Gomodules allow to develop code outside of the GOPATh
+export GOPATH="/usr/local/go"
+
+# Directory where go install and go get will place binaries
+export GOBIN="$GOPATH/bin"
+
+# Append GOBIN to the PATH
+export PATH="$PATH:$GOBIN"
+
+##
+# Aliases
+##
+
+alias drmi="docker images -q -f \"dangling=true\" | xargs docker rmi"
+alias vim="nvim"
+alias nv="nvim"
+
+function weather {
+   command -v "curl" > /dev/null 2>&1 && \
+   curl -4 "wttr.in/$1" -s | head -n 7
+}

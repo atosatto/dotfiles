@@ -1,11 +1,8 @@
 DOTFILES := $(shell pwd)
 
-default: platform crossplatform
+default: all
 
-crossplatform:
-	bash $(DOTFILES)/scripts/generic.sh
+all:
+	@$(DOTFILES)/scripts/setup.sh
 
-platform:
-	bash $(DOTFILES)/scripts/platform.sh
-
-.PHONY: default crossplatform platform
+.PHONY: default all

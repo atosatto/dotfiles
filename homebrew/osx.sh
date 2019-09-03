@@ -1,27 +1,23 @@
-#!/bin/bash
-#
-# Homebrew
-#
-# Installs packages and applications using Homebrew
+#!/usr/bin/env bash
 
 set -e
+source "scripts/functions.sh"
+
+title "Setup Homebrew"
 
 # Check for Homebrew
-if test ! "$(which brew)"
-then
-  echo "  Installing Homebrew"
+
+if test ! "$(which brew)"; then
+  info "Installing homebrew"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 cd "$(dirname "$0")"
 
-# homebrew packages
+# Homebrew packages
 
 TAPS=(
-    homebrew/binary
-    homebrew/science
-    caskroom/cask
-    caskroom/versions
+    homebrew/cask-versions
     neovim/neovim
 )
 
@@ -29,24 +25,21 @@ FORMULAS=(
     youtube-dl
     ffmpeg
     git
-    git-flow
     wget
     nmap
     watch
     tree
     tmux
-    python
-    python3
-    node
-    ruby
+    fzf
+    pyenv
+    pyenv-virtualenv
     go
-    awscli
     shellcheck
     neovim
     packer
     terraform
-    keybase
     mosh
+    sshuttle
     jq
     bind
     icdiff
@@ -60,43 +53,47 @@ CASKS=(
     caffeine
     appcleaner
     cyberduck
-    gpgtools
+    gpg-suite
+    tunnelblick
     iterm2
-    skype
     spotify
     vlc
     webtorrent
     the-unarchiver
     vagrant
     virtualbox
+    virtualbox-extension-pack
     wireshark
     xquartz
-    chicken
-    java
-    atom
     docker
     mactex
-    xampp
     keeweb
     dash2
-    joinme
-    etcher
-    mkchromecast
+    balenaetcher
+    zoomus
+    rocket-chat
 )
 
 for tap in "${TAPS[@]}"
 do
-    brew tap $tap
+  info "Tapping $tap"
+  brew tap $tap
 done
 
-brew install "${FORMULAS[@]}"
-
+info "Updating Homebrew"
 brew update
 
-brew cask install --appdir=/Applications "${CASKS[@]}"
+for formula in "${FORMULAS[@]}"
+do
+  info "Installing $formula"
+  brew install $formula
+done
 
-# brew install graphviz --with-gts
+for cask in "${CASKS[@]}"
+do
+  info "Installing $cask"
+  brew cask install --appdir=/Applications $cask
+done
 
+info "Removing outdated brew files"
 brew cleanup
-
-exit 0

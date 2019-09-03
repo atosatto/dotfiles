@@ -1,77 +1,112 @@
-#!/usr/bin/bash
-#
+#!/usr/bin/env bash
+
+##
 # common functions
+##
+
+title () {
+  echo -e "📝 $1"
+}
 
 info () {
-  echo "  [ \033[00;34m..\033[0m ] $1"
+  echo -e "📍 $1"
+}
+
+warn () {
+  echo -e "🚨 $1"
 }
 
 user () {
-  echo "\r  [ \033[0;33m?\033[0m ] $1 "
+  echo -e "❓ $1"
 }
 
 success () {
-  echo "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+  echo -e "✅ $1"
 }
 
 fail () {
-  echo "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
-  echo ''
-  exit
+  echo -e "🚫 \"$1\""
+  echo ""
+  exit 1
 }
 
 link_files () {
   ln -s $1 $2
-  success "linked $1 to $2"
+  success "Linked $1 to $2"
+}
+
+sudo_link_files () {
+  sudo ln -s $1 $2
+  success "Linked $1 to $2"
 }
 
 install_dotfiles () {
 
   src="$1"
-  dest="$HOME/.`basename \"${src%.*}\"`"
+  dest="$2"
+  root="$3"
 
-  if [ -f $dest ] || [ -d $dest ]
-  then
+  if [ -L $dest ] || [ -f $dest ]; then
 
     overwrite=false
     backup=false
     skip=false
 
-    user "File already exists: $src, what do you want to do? [s]kip, [o]verwrite, [b]ackup?"
-    read -n 1 action
+    while true
+    do
 
-    case "$action" in
-      o )
-        overwrite=true;;
-      b )
-        backup=true;;
-      s )
-        skip=true;;
-      * )
-        ;;
-    esac
+      user "File already exists: $src, what do you want to do? [s]kip, [o]verwrite, [b]ackup?"
+      read -n 1 action
 
-    if [ "$overwrite" == "true" ]
-    then
-      rm -rf $dest
+      case "$action" in
+        o )
+          overwrite=true
+          break
+          ;;
+        b )
+          backup=true
+          break
+          ;;
+        s )
+          skip=true
+          break
+          ;;
+        * )
+          warn "Invalid input: \"$action\""
+          ;;
+      esac
+    done
+
+    if [ "$overwrite" == "true" ]; then
+      if [ ! -z "$root" ]; then
+        sudo rm -rf $dest
+      else
+        rm -rf $dest
+      fi
       success "removed $dest"
     fi
 
-    if [ "$backup" == "true" ]
-    then
+    if [ "$backup" == "true" ]; then
       mv $dest $dest\.backup
       success "moved $dest to $dest.backup"
     fi
 
-    if [ "$skip" == "false" ]
-    then
-      link_files $src $dest
+    if [ "$skip" == "false" ]; then
+      if [ ! -z "$root" ]; then
+        sudo_link_files $src $dest
+      else
+        link_files $src $dest
+      fi
     else
       success "skipped $src"
     fi
 
   else
-    link_files $src $dest
+    if [ -z "$root" ]; then
+      sudo_link_files $src $dest
+    else
+      link_files $src $dest
+    fi
   fi
 
 }

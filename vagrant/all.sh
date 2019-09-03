@@ -1,6 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-source scripts/functions.sh
+set -e
+source "scripts/functions.sh"
+
+title "Setup Vagrant"
 
 basepath="$(dirname $0)"
 cd "$basepath" || exit
@@ -12,13 +15,15 @@ PLUGINS=(
 )
 
 if [ ! -d ~/.vagrant.d/ ]; then
-    echo "  Creating the ~/.vagrant.d folder"
+    info "Creating the ~/.vagrant.d folder"
     mkdir -p ~/.vagrant.d/
 fi
 
-if [ ! -e ~/.vagrant.d/Vagrantfile ]; then
-    echo "  Installing the Vagrantfile defaults file into ~/.vagrant.d"
-    link_files "$(pwd $basepath)/Vagrantfile" ~/.vagrant.d/Vagrantfile
-fi
+info "Symlinking the Vagrantfile defaults into ~/.vagrant.d"
+install_dotfiles "$(pwd $basepath)/Vagrantfile" "$HOME/.vagrant.d/Vagrantfile"
 
-vagrant plugin install "${PLUGINS[@]}"
+for plugin in "${PLUGINS[@]}"
+do
+  info "Installing $plugin"
+  vagrant plugin install $plugin
+done
