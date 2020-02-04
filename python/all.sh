@@ -16,6 +16,7 @@ PACKAGES=(
   ansible
   molecule
   neovim
+  python-openstackclient
 )
 
 for version in "${VERSIONS[@]}"
