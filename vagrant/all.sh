@@ -12,6 +12,7 @@ PLUGINS=(
   vagrant-hostmanager
   vagrant-vbguest
   vagrant-digitalocean
+  vagrant-scp
 )
 
 if [ ! -d ~/.vagrant.d/ ]; then
