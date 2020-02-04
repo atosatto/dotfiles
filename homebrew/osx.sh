@@ -16,8 +16,13 @@ cd "$(dirname "$0")"
 
 # Homebrew packages
 
+# NB:
+# - The docker cask provides the kubectl command
+# - The python package is installed as dependency of the sshuttle command, however pyenv is used to manage the installed python versions
+
 TAPS=(
     homebrew/cask-versions
+    homebrew/cask-drivers
     neovim/neovim
 )
 
@@ -29,6 +34,8 @@ FORMULAS=(
     nmap
     watch
     tree
+    gnu-tar
+    md5sha1sum
     tmux
     fzf
     pyenv
@@ -44,13 +51,18 @@ FORMULAS=(
     bind
     icdiff
     pwgen
+    kubectl
+    kubectx
+    kustomize
+    pinentry-mac
+    yubikey-personalization
 )
 
 CASKS=(
     spectacle
     dropbox
     firefox
-    caffeine
+    keepingyouawake
     appcleaner
     cyberduck
     gpg-suite
@@ -66,12 +78,15 @@ CASKS=(
     wireshark
     xquartz
     docker
+    minikube
     mactex
     keeweb
     dash2
     balenaetcher
     zoomus
     rocket-chat
+    microsoft-office
+    garmin-express
 )
 
 for tap in "${TAPS[@]}"
