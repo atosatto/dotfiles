@@ -5,8 +5,10 @@
 
 [alias]
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  llog = log --color --decorate --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --all
   cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
-  checkout-pr = "!f() { git fetch $1 pull/$2/head:pr-$2 && git checkout pr-$2; }; f"
+  checkout-pr = "!f() { git fetch ${2:-upstream} pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+  cleanup-pr = "git checkout master ; git for-each-ref refs/heads/pr/* --format="%(refname)" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 
 [push]
   default = matching
