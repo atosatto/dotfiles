@@ -16,12 +16,8 @@ unset LC_CTYPE
 ##
 
 export GPG_TTY=$(tty)
-if [ -f "${HOME}/.gpg-agent-info" ]; then
-   . "${HOME}/.gpg-agent-info"
-    export GPG_AGENT_INFO
-    export SSH_AUTH_SOCK
-    export SSH_AGENT_PID
-fi
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
 
 ##
 # Python
@@ -52,6 +48,13 @@ export GOBIN="$GOPATH/bin"
 
 # Append GOBIN to the PATH
 export PATH="$PATH:$GOBIN"
+
+##
+# Homebrew Binaries
+##
+
+# use gnu-tar instead of OS X's build-in tar command
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
 ##
 # Aliases

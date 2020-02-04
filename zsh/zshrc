@@ -65,7 +65,7 @@ ZSH_THEME="blinks"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vagrant python go aws docker docker-compose nmap)
+plugins=(git vagrant python go docker docker-compose kubectl nmap)
 
 source $ZSH/oh-my-zsh.sh
 
