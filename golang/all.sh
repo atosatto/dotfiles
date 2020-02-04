@@ -24,6 +24,7 @@ fi
 
 PACKAGES=(
   github.com/rakyll/hey
+  honnef.co/go/tools/cmd/...
 )
 
 for package in "${PACKAGES[@]}"
