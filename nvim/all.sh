@@ -9,7 +9,7 @@ basepath="$(dirname $0)"
 cd "$basepath" || exit
 
 mkdir -p ~/.config/nvim
-for f in $(ls -d *.vim)
+for f in $(ls -d *.{vim,json})
 do
   info "Symlinking $f into ~/.config/nvim"
   install_dotfiles "$(pwd $basepath)/$f" "$HOME/.config/nvim/$f"
