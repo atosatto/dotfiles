@@ -21,3 +21,7 @@ fi
 info "Symlinking the ~/.zshrc and ~/.zprofile files"
 install_dotfiles "$(pwd $basepath)/zshrc" "$HOME/.zshrc"
 install_dotfiles "$(pwd $basepath)/zprofile" "$HOME/.zprofile"
+
+info "Installing the custom oh-my-zsh themes"
+mkdir -p ~/.oh-my-zsh/custom/themes/
+install_dotfiles  "$(pwd $basepath)/atosatto.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/atosatto.zsh-theme"
