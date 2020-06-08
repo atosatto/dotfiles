@@ -13,6 +13,9 @@
 
 let NERDTreeShowHidden=1
 
+" automatically remove deleted files from the buffer
+let NERDTreeAutoDeleteBuffer = 1
+
 " -------------------------------------------------------------------------------------------------
 " NERDCommenter
 " -------------------------------------------------------------------------------------------------
@@ -20,8 +23,6 @@ let NERDTreeShowHidden=1
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
-" automatically remove deleted files from the buffer
-let NERDTreeAutoDeleteBuffer = 1
 
 " -------------------------------------------------------------------------------------------------
 " NERDTree git
@@ -40,6 +41,12 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 " -------------------------------------------------------------------------------------------------
+" vim-gitgutter
+" -------------------------------------------------------------------------------------------------
+
+let g:gitgutter_set_sign_backgrounds = 1
+
+" -------------------------------------------------------------------------------------------------
 " vim-go
 " -------------------------------------------------------------------------------------------------
 
@@ -55,12 +62,11 @@ let g:go_fmt_command = "goimports"
 let g:go_def_mapping_enabled = 0
 
 " -------------------------------------------------------------------------------------------------
-" lightline.vim
+" vim-airline
 " -------------------------------------------------------------------------------------------------
 
-let g:lightline = {
-      \ 'colorscheme': 'powerline',
-      \ }
+" Enable the tabline
+let g:airline#extensions#tabline#enabled = 1
 
 " -------------------------------------------------------------------------------------------------
 " editorconfig-vim
@@ -69,10 +75,13 @@ let g:lightline = {
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " -------------------------------------------------------------------------------------------------
-" 
+" coc.nvim
 " -------------------------------------------------------------------------------------------------
 
 let g:coc_global_extensions = [
-  \ 'coc-emoji', 'coc-prettier',
-  \ 'coc-json', 'coc-yaml', 'coc-python'
+  \ 'coc-emoji',
+  \ 'coc-prettier',
+  \ 'coc-json',
+  \ 'coc-yaml',
+  \ 'coc-python'
   \ ]

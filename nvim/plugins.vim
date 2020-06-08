@@ -13,7 +13,8 @@ call plug#begin($HOME . "/.local/share/nvim/plugged")
 Plug 'flazz/vim-colorschemes'
 
 " Statusline/tabline
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " NERDTree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -26,6 +27,7 @@ Plug 'junegunn/fzf.vim'
 
 " GIT
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'

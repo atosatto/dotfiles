@@ -38,6 +38,9 @@ filetype on        " detect files types based on the extension
 filetype plugin on " load plugins matching the filetype
 filetype indent on " preserve filetype indentation
 
+" Make sure to show the tabline
+"set showtabline=2
+
 " Initial indentation settings
 set expandtab    " insert spaces when tab is pressed
 set tabstop=2    " number of spaces inserted when tab is pressed
@@ -49,6 +52,9 @@ set nu
 " Opening a new file when the current buffer has unsaved changes causes files
 " to be hidden instead of closed
 set hidden
+
+" Display the tabline
+set showtabline=2
 
 " Always show signcolumns (e.g. breakpoints)
 set signcolumn=yes
