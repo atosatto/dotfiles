@@ -52,8 +52,8 @@ FORMULAS=(
     icdiff
     pwgen
     kubectl
-    kubectx
     kustomize
+    kubie
     pinentry-mac
     yubikey-personalization
 )
