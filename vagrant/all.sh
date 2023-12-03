@@ -11,7 +11,6 @@ cd "$basepath" || exit
 PLUGINS=(
   vagrant-hostmanager
   vagrant-vbguest
-  vagrant-digitalocean
   vagrant-scp
 )
 

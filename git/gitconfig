@@ -15,7 +15,7 @@
   excludesfile = /etc/git/global_gitignore
 
 [commit]
-  gpgsign = true
+	gpgsign = false
 
 [diff]
   tool = icdiff

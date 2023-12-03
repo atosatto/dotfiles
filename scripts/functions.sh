@@ -78,7 +78,7 @@ install_dotfiles () {
     done
 
     if [ "$overwrite" == "true" ]; then
-      if [ ! -z "$root" ]; then
+      if [ -n "$root" ]; then
         sudo rm -rf $dest
       else
         rm -rf $dest
@@ -92,7 +92,7 @@ install_dotfiles () {
     fi
 
     if [ "$skip" == "false" ]; then
-      if [ ! -z "$root" ]; then
+      if [ -n "$root" ]; then
         sudo_link_files $src $dest
       else
         link_files $src $dest
@@ -102,7 +102,7 @@ install_dotfiles () {
     fi
 
   else
-    if [ -z "$root" ]; then
+    if [ -n "$root" ]; then
       sudo_link_files $src $dest
     else
       link_files $src $dest

@@ -1,0 +1,74 @@
+## brew taps
+tap "homebrew/bundle"
+tap "homebrew/cask-versions"
+tap "neovim/neovim"
+
+# set arguments for all 'brew install --cask' commands
+cask_args appdir: "~/Applications", require_sha: true
+
+## mac os applications management
+brew "mas"
+
+## desktop & shell
+brew "fish"
+brew "starship"
+cask "iterm2"
+cask "rectangle"
+cask "keepingyouawake"
+
+## basic tools
+brew "coreutils"
+brew "gnu-sed"
+brew "gnu-tar"
+brew "ripgrep"
+brew "fzf"
+brew "zoxide"
+brew "nmap"
+brew "tree"
+brew "watch"
+brew "wget"
+brew "tmux"
+brew "bind"
+brew "jq"
+cask "docker"
+cask "wireshark"
+cask "virtualbox"
+cask "vagrant"
+cask "the-unarchiver"
+cask "appcleaner"
+
+## ssh
+brew "mosh"
+brew "sshuttle"
+cask "secretive"
+
+## programming
+brew "git"
+brew "icdiff"
+brew "neovim"
+brew "go"
+brew "pyenv"
+brew "pyenv-virtualenv"
+
+## kubernetes
+brew "kubernetes-cli"
+brew "kubectx"
+brew "kind"
+brew "minikube"
+brew "k9s"
+
+## internet & passwords
+cask "firefox"
+brew "pwgen"
+cask "1password"
+mas "1Password for Safari", id: 1569813296
+
+## documents
+cask "dropbox"
+
+## media
+cask "vlc"
+cask "webtorrent"
+
+## others
+cask "garmin-express"

@@ -36,7 +36,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-multiple-cursors'
 
 " LSP client (autocomplete)
-Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Golang
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }

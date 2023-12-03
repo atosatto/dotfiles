@@ -5,10 +5,9 @@ source "scripts/functions.sh"
 
 title "Setup Python"
 
-VERSION_GLOBAL="3.7.4"
+VERSION_GLOBAL="3.12.0"
 
 VERSIONS=(
-  "3.6.9"
   "$VERSION_GLOBAL"
 )
 
@@ -16,7 +15,6 @@ PACKAGES=(
   ansible
   molecule
   neovim
-  python-openstackclient
 )
 
 for version in "${VERSIONS[@]}"
@@ -31,5 +29,5 @@ pyenv global $VERSION_GLOBAL
 for package in "${PACKAGES[@]}"
 do
   info "Installing $package"
-  PIP_REQUIRE_VIRTUALENV=false pip install $package
+  PIP_REQUIRE_VIRTUALENV=false pip3 install $package
 done

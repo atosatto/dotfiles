@@ -15,10 +15,10 @@ if [ "$SHELL" != "/usr/local/bin/fish" ]; then
 fi
 
 info "Installing the fish configuration"
-mkdir -p "$HOME/.config/fish" 
+mkdir -p "$HOME/.config/fish"
 install_dotfiles "$(pwd $basepath)/config.fish" "$HOME/.config/fish/config.fish"
 
 
 info "Installing the starship configuration"
-mkdir -p "$HOME/.config/" 
+mkdir -p "$HOME/.config/"
 install_dotfiles "$(pwd $basepath)/starship.toml" "$HOME/.config/starship.toml"

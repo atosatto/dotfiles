@@ -5,15 +5,13 @@ source "scripts/functions.sh"
 
 title "Setup Go"
 
-if [ -n "$GOPATH" ]; then
-  for path in ${GOPATH//:/ }
-  do
-    if [ ! -d "$path" ]; then
-      info "Creating the $path directory"
-      sudo mkdir -p "$path"
-      sudo chown $USER:admin $path
-    fi
-  done
+export GOPATH="/usr/local/go"
+export GOBIN="$GOPATH/bin"
+
+if [ -n "$GOPATH" ] && [ ! -d "$GOPATH" ]; then
+  info "Creating the $GOPATH directory"
+  sudo mkdir -p "$GOPATH"
+  sudo chown $USER:admin $path
 fi
 
 if [ -n "$GOBIN" ] && [ ! -d "$GOBIN" ]; then
@@ -23,12 +21,12 @@ if [ -n "$GOBIN" ] && [ ! -d "$GOBIN" ]; then
 fi
 
 PACKAGES=(
-  github.com/rakyll/hey
-  honnef.co/go/tools/cmd/...
+  github.com/rakyll/hey@latest
+  github.com/google/go-containerregistry/cmd/crane@latest
 )
 
 for package in "${PACKAGES[@]}"
 do
   info "Installing $package"
-  go get -u $package
+  go install $package
 done
