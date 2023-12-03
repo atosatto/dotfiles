@@ -1,0 +1,73 @@
+# Show only the user, path and git
+# information in the normal prompt
+# and all the other information on the right
+# prompt
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$fill\
+$all\
+$line_break\
+$character"""
+
+# Fill the prompt with spaces
+[fill]
+symbol = " "
+
+# Use the $ character for the prompt
+[character]
+success_symbol = "[\\$](bold white)"
+error_symbol = "[\\$](bold red)"
+
+# Always show the username in the prompt
+[username]
+style_user = "bold green"
+format = "[$user]($style)"
+show_always = true
+disabled = false
+
+# Always show the hostname in the prompt
+[hostname]
+format =  "[@](bold blue)[$hostname](bold cyan) "
+trim_at = "."
+ssh_only = false
+disabled = false
+
+# Change the style of the directory
+# module to be different from the one
+# used for the hostname
+[directory]
+style = "yellow"
+disabled = false
+
+# Do not show commands duration
+[cmd_duration]
+disabled = true
+
+# Remove the symbol from git branch format
+[git_branch]
+format = "\\[[$branch]($style) "
+style = "bold blue"
+disabled = false
+
+# Remove the square brackers from the
+# git status format
+[git_status]
+format = "[$all_status$ahead_behind]($style)\\]"
+
+# Show Kubernetes context in the prompt
+[kubernetes]
+style = "blue"
+disabled = false
+
+# Show the current time
+[time]
+format = '[ $time ]($style)'
+style = "bold bright-black"
+disabled = false

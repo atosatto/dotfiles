@@ -27,17 +27,17 @@ TAPS=(
 )
 
 FORMULAS=(
-    youtube-dl
-    ffmpeg
     git
     wget
     nmap
     watch
     tree
     gnu-tar
-    md5sha1sum
+    gnu-sed
+    coreutils
     tmux
     fzf
+    starship
     pyenv
     pyenv-virtualenv
     go
@@ -53,9 +53,13 @@ FORMULAS=(
     pwgen
     kubectl
     kustomize
-    kubie
+    k9s
+    kind
+    kubectx
+    minikube
     pinentry-mac
     yubikey-personalization
+    ffmpeg
 )
 
 CASKS=(
@@ -66,7 +70,6 @@ CASKS=(
     appcleaner
     cyberduck
     gpg-suite
-    tunnelblick
     iterm2
     spotify
     vlc
@@ -78,14 +81,9 @@ CASKS=(
     wireshark
     xquartz
     docker
-    minikube
     mactex
     keeweb
     dash2
-    balenaetcher
-    zoomus
-    rocket-chat
-    microsoft-office
     garmin-express
 )
 
@@ -107,7 +105,7 @@ done
 for cask in "${CASKS[@]}"
 do
   info "Installing $cask"
-  brew cask install --appdir=/Applications $cask
+  brew install --cask --appdir=/Applications $cask
 done
 
 info "Removing outdated brew files"

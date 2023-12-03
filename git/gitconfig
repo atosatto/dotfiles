@@ -1,7 +1,6 @@
 [user]
   name = Andrea Tosatto
   email = andrea.tosy@gmail.com
-  signingkey = 0DFE1300
 
 [alias]
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
