@@ -63,8 +63,10 @@ brew "pwgen"
 cask "1password"
 mas "1Password for Safari", id: 1569813296
 
-## documents
+## documents & productivity
 cask "dropbox"
+mas "Pages", id: 409201541
+mas "Numbers", id: 409203825
 
 ## media
 cask "vlc"
@@ -72,3 +74,4 @@ cask "webtorrent"
 
 ## others
 cask "garmin-express"
+cask "trainerroad"
