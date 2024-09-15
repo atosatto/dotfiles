@@ -5,7 +5,7 @@ source "scripts/functions.sh"
 
 title "Setup Python"
 
-VERSION_GLOBAL="3.12.0"
+VERSION_GLOBAL="3.12.6"
 
 VERSIONS=(
   "$VERSION_GLOBAL"

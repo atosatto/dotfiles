@@ -5,11 +5,11 @@ end
 ## Disable fish shell default greetins message
 set fish_greeting
 
+## Update the path with the location of brew binaries
+/opt/homebrew/bin/brew shellenv | source
+
 ## Load startship prompt
 starship init fish | source
-
-## Update the path with the location of brew binaries
-brew shellenv | source
 
 ## Configure "secretive" as ssh-agent
 set -x SSH_AUTH_SOCK $HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh

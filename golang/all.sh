@@ -11,7 +11,7 @@ export GOBIN="$GOPATH/bin"
 if [ -n "$GOPATH" ] && [ ! -d "$GOPATH" ]; then
   info "Creating the $GOPATH directory"
   sudo mkdir -p "$GOPATH"
-  sudo chown $USER:admin $path
+  sudo chown $USER:admin $GOPATH
 fi
 
 if [ -n "$GOBIN" ] && [ ! -d "$GOBIN" ]; then

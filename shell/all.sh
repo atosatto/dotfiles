@@ -8,10 +8,10 @@ title "Setup Fish and Starship"
 basepath="$(dirname $0)"
 cd "$basepath" || exit
 
-if [ "$SHELL" != "/usr/local/bin/fish" ]; then
+if [ "$SHELL" != "/opt/homebrew/bin/fish" ]; then
   info "Setting fish as default shell"
-  grep -q '/usr/local/bin/fish' /etc/shells || echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-  chsh -s /usr/local/bin/fish
+  grep -q '/opt/homebrew/bin/fish' /etc/shells || echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
+  chsh -s /opt/homebrew/bin/fish
 fi
 
 info "Installing the fish configuration"

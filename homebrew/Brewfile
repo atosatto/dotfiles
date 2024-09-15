@@ -1,6 +1,5 @@
 ## brew taps
 tap "homebrew/bundle"
-tap "homebrew/cask-versions"
 tap "neovim/neovim"
 
 # set arguments for all 'brew install --cask' commands
