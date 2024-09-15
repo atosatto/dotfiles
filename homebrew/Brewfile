@@ -21,6 +21,7 @@ brew "coreutils"
 brew "gnu-sed"
 brew "gnu-tar"
 brew "ripgrep"
+brew "bat"
 brew "fzf"
 brew "zoxide"
 brew "nmap"
@@ -62,6 +63,7 @@ cask "firefox"
 brew "pwgen"
 cask "1password"
 mas "1Password for Safari", id: 1569813296
+mas "Tailscale", id: 1475387142
 
 ## documents & productivity
 cask "dropbox"

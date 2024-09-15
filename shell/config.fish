@@ -2,6 +2,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+## Disable fish shell default greetins message
+set fish_greeting
+
 ## Load startship prompt
 starship init fish | source
 
