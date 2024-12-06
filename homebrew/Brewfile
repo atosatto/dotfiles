@@ -3,7 +3,7 @@ tap "homebrew/bundle"
 tap "neovim/neovim"
 
 # set arguments for all 'brew install --cask' commands
-cask_args appdir: "~/Applications", require_sha: true
+# cask_args appdir: "~/Applications", require_sha: true
 
 ## mac os applications management
 brew "mas"
@@ -30,9 +30,11 @@ brew "wget"
 brew "tmux"
 brew "bind"
 brew "jq"
-cask "docker"
+brew "docker"
+brew "colima"
+brew "shellcheck"
+cask "zed"
 cask "wireshark"
-cask "virtualbox"
 cask "vagrant"
 cask "the-unarchiver"
 cask "appcleaner"
@@ -74,5 +76,5 @@ cask "vlc"
 cask "webtorrent"
 
 ## others
-cask "garmin-express"
+# cask "garmin-express"
 cask "trainerroad"

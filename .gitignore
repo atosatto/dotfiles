@@ -1,2 +1,2 @@
-## Ignore lock-file generated from 'brew bundle install'
+## Ignore lock files generated from 'brew bundle install'
 homebrew/Brewfile.lock.json
