@@ -11,7 +11,7 @@ brew "mas"
 ## desktop & shell
 brew "fish"
 brew "starship"
-cask "iterm2"
+cask "ghostty"
 cask "rectangle"
 cask "keepingyouawake"
 

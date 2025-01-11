@@ -5,7 +5,7 @@ source "scripts/functions.sh"
 
 title "Setup Python"
 
-VERSION_GLOBAL="3.12.6"
+VERSION_GLOBAL="3.12.8"
 
 VERSIONS=(
   "$VERSION_GLOBAL"
@@ -15,6 +15,7 @@ PACKAGES=(
   ansible
   molecule
   neovim
+  pipenv
 )
 
 for version in "${VERSIONS[@]}"
