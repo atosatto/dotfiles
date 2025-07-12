@@ -44,6 +44,7 @@ disabled = false
 # used for the hostname
 [directory]
 style = "yellow"
+fish_style_pwd_dir_length=1
 disabled = false
 
 # Do not show commands duration
